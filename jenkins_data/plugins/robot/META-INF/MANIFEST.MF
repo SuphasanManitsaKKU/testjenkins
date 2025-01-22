@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 17
+Specification-Title: Robot Framework plugin
+Specification-Version: 5.0
+Implementation-Title: Robot Framework plugin
+Implementation-Version: 5.0.0
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: robot
+Short-Name: robot
+Long-Name: Robot Framework plugin
+Url: https://github.com/jenkinsci/robot-plugin/blob/master/doc/README.md
+Plugin-Version: 5.0.0
+Hudson-Version: 2.414.3
+Jenkins-Version: 2.414.3
+Plugin-Dependencies: blueocean-rest-impl:1.27.11;resolution:=optional,co
+ mmons-lang3-api:3.13.0-62.v7d18e55f51e2,workflow-step-api:657.v03b_e811
+ 5821b_,junit:1265.v65b_14fa_f12f0,mailer:470.vc91f60c5d8e2;resolution:=
+ optional,matrix-project:822.824.v14451b_c0fd42,script-security:1335.vf0
+ 7d9ce377a_e;resolution:=optional,structs:337.v1b_04ea_4df7c8,token-macr
+ o:400.v35420b_922dcb_;resolution:=optional
+Plugin-Developers: Janne Piironen:jpiironen:janne.piironen@gmail.com,Ale
+ ksi Simell:aleksisimell:aleksi.simell@eficode.com,Tatu Kairi:tattoo:tat
+ u.kairi@eficode.com,Juho Saarinen:hifi:juho.saarinen@eficode.com
+Plugin-ScmConnection: scm:git:ssh://github.com/jenkinsci/robot-plugin.gi
+ t
+Plugin-ScmTag: robot-5.0.0
+Plugin-ScmUrl: https://www.github.com/jenkinsci/robot-plugin
+Plugin-GitHash: 637074622168b9e5627bf0138d9f8871e9ecc26a
+Implementation-Build: 637074622168b9e5627bf0138d9f8871e9ecc26a
+
