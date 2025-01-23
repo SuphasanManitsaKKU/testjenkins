@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.12' // ใช้ Docker Image ของ Python 3.12
+            image 'python:3.12'
+            args '--user=root'
         }
     }
 
