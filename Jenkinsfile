@@ -1,13 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.12' // ใช้ Docker Image ของ Python 3.12
+        }
+    }
 
     stages {
         stage('Setup') {
             steps {
-                echo 'Creating virtual environment and installing Robot Framework...'
+                echo 'Installing Robot Framework...'
                 sh '''
-                python3 -m venv venv
-                . venv/bin/activate
                 pip install --upgrade pip
                 pip install robotframework
                 '''
@@ -17,10 +19,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 echo 'Running Robot Framework tests...'
-                sh '''
-                . venv/bin/activate
-                robot UAT-Lab7-001.robot
-                '''
+                sh 'robot UAT-Lab7-001.robot'
             }
         }
 
