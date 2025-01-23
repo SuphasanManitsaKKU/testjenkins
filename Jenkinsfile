@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('Setup') {
+            steps {
+                echo 'Installing Robot Framework...'
+                sh 'pip install robotframework'
+            }
+        }
+
         stage('Run Robot Tests') {
             steps {
                 echo 'Running Robot Framework tests...'
