@@ -4,15 +4,23 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                echo 'Installing Robot Framework...'
-                sh 'pip install robotframework'
+                echo 'Creating virtual environment and installing Robot Framework...'
+                sh '''
+                python -m venv venv
+                . venv/bin/activate
+                pip install --upgrade pip
+                pip install robotframework
+                '''
             }
         }
 
         stage('Run Robot Tests') {
             steps {
                 echo 'Running Robot Framework tests...'
-                sh 'robot UAT-Lab7-001.robot'
+                sh '''
+                . venv/bin/activate
+                robot UAT-Lab7-001.robot
+                '''
             }
         }
 
