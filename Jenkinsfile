@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Creating virtual environment and installing Robot Framework...'
                 sh '''
-                python -m venv venv
+                python3 -m venv venv
                 . venv/bin/activate
                 pip install --upgrade pip
                 pip install robotframework
